@@ -1,17 +1,63 @@
 # fvmtest
 
-A new Flutter project.
+Configuracion inicial FVM
 
-## Getting Started
+## Instalar Dart
 
-This project is a starting point for a Flutter application.
+```
+ brew tap dart-lang/dart
 
-A few resources to get you started if this is your first Flutter project:
+ brew install dart
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# flutter_fvm
+## Iniciamos FVM
+
+```
+ pub global activate fvm
+
+```
+
+## Instalamos versiones del SDK
+
+```
+ fvm install <version>
+
+ fvm install 1.22.6 (Ultimo soporte, la mayoria de proyectos la utiliza)
+
+ fvm install 2.0.0  (No-null safety, aqui ya la mayoria de Widgets son deprecados)
+
+ fvm install 2.0.3  (actual - null safety)
+
+```
+
+## Ver nuestra lista de versiones
+
+```
+ fvm list 
+
+```
+
+## Elegimos la version que deseemos usar
+
+```
+ fvm use <version>
+
+ fvm use 1.22.6
+
+ fvm use 2.0.0
+
+```
+
+## Configuracion para VS CODE
+
+```
+ En el apartado de "view" seleccionar "command palette" escribir y seleccionar "Open Setting(JSON)"
+ 
+
+ Agregamos 
+ 
+  "dart.flutterSdkPaths": [".fvm/flutter_sdk"]
+ 
+
+```
